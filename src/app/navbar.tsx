@@ -119,21 +119,21 @@ export default function Navbar() {
                 <span className="sr-only">Toggle menu</span>
               </Button>
             </SheetTrigger>
-            <SheetContent side="right" className="w-80">
+            <SheetContent side="right" className="w-80 p-4 overflow-y-auto">
               <SheetHeader>
                 <SheetTitle className="flex items-center justify-center text-center">
                   <Image
                     src="/images/logo.png"
                     alt="CEM-Kharis Temple Logo"
-                    width={40}
-                    height={40}
+                    width={800}
+                    height={800}
                     className="h-10 w-auto"
                   />
                 </SheetTitle>
               </SheetHeader>
 
               {/* Mobile Navigation Links */}
-              <nav className="flex flex-col space-y-4 mt-8">
+              <nav className="flex flex-col space-y-4 my-4">
                 {navigationLinks.map((link) => {
                   const isActive = pathname === link.href;
                   return (
@@ -154,7 +154,7 @@ export default function Navbar() {
               </nav>
 
               {/* Contact Information */}
-              <div className="mt-8 space-y-4">
+              <div className="space-y-4">
                 <div className="flex items-center space-x-3 text-sm">
                   <FaPhone className="h-4 w-4 text-primary" />
                   <div>

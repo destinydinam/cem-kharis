@@ -278,11 +278,6 @@ export default function Footer() {
               >
                 Terms of Service
               </Link>
-              <div className="flex items-center space-x-2">
-                <span>Made with</span>
-                <Heart className="h-4 w-4 text-red-500" />
-                <span>by MultiMediaCabin</span>
-              </div>
             </div>
           </div>
         </div>
