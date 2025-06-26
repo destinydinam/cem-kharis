@@ -176,66 +176,6 @@ export function RecentEventsSection() {
               </motion.div>
             ))}
           </div>
-
-          {/* Call to Action Section */}
-          <motion.div
-            className="text-center bg-gradient-to-br from-primary/5 to-secondary/5 rounded-3xl p-12 space-y-8"
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.8 }}
-            viewport={{ once: true }}
-          >
-            <div className="space-y-4">
-              <h3 className="text-3xl md:text-4xl font-bold text-gray-900">
-                Stay Connected with Church Events
-              </h3>
-              <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-                Don&apos;t miss out on upcoming events, conferences, and
-                community outreach programs. Join our church family and be part
-                of something greater.
-              </p>
-            </div>
-
-            <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-              <Button
-                size="lg"
-                className="church-button-primary text-lg px-8 py-4"
-                asChild
-              >
-                <Link href="/contact">
-                  <Users className="mr-2 h-5 w-5" />
-                  Join Our Community
-                </Link>
-              </Button>
-
-              <Button
-                size="lg"
-                variant="outline"
-                className="text-lg px-8 py-4 border-primary text-primary hover:bg-primary hover:text-white"
-                asChild
-              >
-                <Link href="/gallery">
-                  <Calendar className="mr-2 h-5 w-5" />
-                  View Event Gallery
-                </Link>
-              </Button>
-            </div>
-
-            {/* Newsletter Signup */}
-            <div className="pt-6 border-t border-gray-200">
-              <p className="text-gray-600 mb-4">
-                Subscribe to our newsletter to get updates on upcoming events
-                and church news.
-              </p>
-              <Button
-                variant="outline"
-                className="border-primary text-primary hover:bg-primary hover:text-white"
-                asChild
-              >
-                <Link href="/contact">Subscribe to Newsletter</Link>
-              </Button>
-            </div>
-          </motion.div>
         </div>
       </div>
     </section>

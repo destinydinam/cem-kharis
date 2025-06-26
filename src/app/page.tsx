@@ -3,9 +3,6 @@
 import { HeroSection } from "@/components/hero-section";
 import { WelcomeSection } from "@/components/welcome-section";
 import { ServiceTimesSection } from "@/components/service-times-section";
-import { MinistryProgramsSection } from "@/components/ministry-programs-section";
-import { RecentEventsSection } from "@/components/recent-events-section";
-import { ContactInfoSection } from "@/components/contact-info-section";
 import Navbar from "./navbar";
 import Footer from "./footer";
 
@@ -24,13 +21,13 @@ export default function HomePage() {
       <ServiceTimesSection />
 
       {/* Ministry Programs Section */}
-      <MinistryProgramsSection />
+      {/* <MinistryProgramsSection /> */}
 
       {/* Recent Events Section */}
-      <RecentEventsSection />
+      {/* <RecentEventsSection /> */}
 
       {/* Contact Info Section */}
-      <ContactInfoSection />
+      {/* <ContactInfoSection /> */}
 
       <Footer />
     </main>
