@@ -4,7 +4,7 @@ import { motion } from "motion/react";
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
-import { Calendar, Clock, MapPin, Users } from "lucide-react";
+import { Calendar, Clock, MapPin } from "lucide-react";
 import Link from "next/link";
 import Image from "next/image";
 
