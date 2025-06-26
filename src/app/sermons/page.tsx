@@ -42,7 +42,7 @@ const AudioPlayer = ({
   const [duration, setDuration] = useState(0);
   const [volume, setVolume] = useState(1);
   const [isMuted, setIsMuted] = useState(false);
-  const [isLoaded, setIsLoaded] = useState(false);
+  const [, setIsLoaded] = useState(false);
 
   // Reset player when switching between sermons
   useEffect(() => {
@@ -267,7 +267,7 @@ const sermons = [
     series: "Purpose & Destiny",
     audioSrc: "https://www.soundjay.com/misc/sounds/bell-ringing-05.mp3", // Free sample audio
     description:
-      "Discovering God's unique plan for your life and walking confidently in His purpose.",
+      "Discovering God&apos;s unique plan for your life and walking confidently in His purpose.",
     tags: ["Purpose", "Destiny", "Faith"],
   },
   {
@@ -291,7 +291,7 @@ const sermons = [
     series: "Victory Series",
     audioSrc: "https://www.soundjay.com/misc/sounds/bell-ringing-05.mp3", // Free church bells sample
     description:
-      "How to maintain faith and joy regardless of life's challenges.",
+      "How to maintain faith and joy regardless of life&apos;s challenges.",
     tags: ["Victory", "Faith", "Overcoming"],
   },
   {
@@ -315,7 +315,7 @@ const sermons = [
     series: "Kingdom Principles",
     audioSrc: "https://www.soundjay.com/misc/sounds/bell-ringing-05.mp3", // Free bell sample
     description:
-      "Biblical principles for managing finances and experiencing God's provision.",
+      "Biblical principles for managing finances and experiencing God&apos;s provision.",
     tags: ["Stewardship", "Finances", "Provision"],
   },
   {
@@ -327,7 +327,7 @@ const sermons = [
     series: "Relationships",
     audioSrc: "https://www.soundjay.com/misc/sounds/bell-ringing-05.mp3", // Free sample MP3
     description:
-      "God's design for healthy relationships in marriage, family, and community.",
+      "God&apos;s design for healthy relationships in marriage, family, and community.",
     tags: ["Relationships", "Family", "Community"],
   },
 ];
@@ -379,7 +379,7 @@ export default function SermonsPage() {
             </Badge>
             <h1 className="text-4xl md:text-6xl font-serif font-bold text-gray-900 mb-6">
               Listen & Learn
-              <span className="text-primary block">God's Word</span>
+              <span className="text-primary block">God&apos;s Word</span>
             </h1>
             <p className="text-xl text-gray-600 leading-relaxed mb-8">
               Access our collection of powerful sermons and teachings from Rev.
@@ -486,7 +486,7 @@ export default function SermonsPage() {
         <div className="container mx-auto px-4">
           <motion.div className="text-center max-w-3xl mx-auto" {...fadeInUp}>
             <h2 className="text-3xl md:text-4xl font-serif font-bold text-gray-900 mb-6">
-              Stay Connected to God's Word
+              Stay Connected to God&apos;s Word
             </h2>
             <p className="text-lg text-gray-600 mb-8">
               Subscribe to our podcast or visit us in person to experience the

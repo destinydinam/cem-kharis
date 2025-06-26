@@ -4,10 +4,8 @@ import { motion } from "motion/react";
 import {
   FaCamera,
   FaUsers,
-  FaHeart,
   FaCalendarAlt,
   FaMapMarkerAlt,
-  FaExternalLinkAlt,
   FaChurch,
   FaHandsHelping,
   FaChild,
@@ -17,7 +15,6 @@ import {
 import { Button } from "@/components/ui/button";
 import {
   Card,
-  CardContent,
   CardDescription,
   CardHeader,
   CardTitle,
@@ -57,7 +54,7 @@ const galleryImages = [
     id: 4,
     src: "/images/gallery-4.png",
     title: "Teaching Service",
-    description: "Diving deep into God's Word every Tuesday",
+    description: "Diving deep into God&apos;s Word every Tuesday",
     category: "Teaching",
     date: "October 2023",
   },
@@ -117,7 +114,7 @@ export default function GalleryPage() {
               Photo Gallery
             </Badge>
             <h1 className="text-4xl md:text-6xl font-serif font-bold text-gray-900 mb-6">
-              Capturing God's Work
+              Capturing God&apos;s Work
               <span className="text-primary block">In Our Community</span>
             </h1>
             <p className="text-xl text-gray-600 leading-relaxed mb-8">

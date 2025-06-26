@@ -13,7 +13,6 @@ import {
   FaBolt,
   FaPhone,
   FaChurch,
-  FaPray,
   FaHandsHelping,
   FaChild,
 } from "react-icons/fa";
@@ -43,14 +42,14 @@ const services = [
       "Dynamic praise and worship with Kharis Praise team",
       "Life-changing messages from Rev. Dr. Steve Mensah",
       "Prayer for breakthrough and victory",
-      "Children's ministry during service",
+      "Children&apos;s ministry during service",
       "Fellowship and connection time",
     ],
     benefits: [
-      "Experience God's presence in powerful worship",
+      "Experience God&apos;s presence in powerful worship",
       "Receive practical biblical wisdom for your week",
       "Connect with a loving church family",
-      "Find hope and encouragement for life's challenges",
+      "Find hope and encouragement for life&apos;s challenges",
     ],
     icon: FaChurch,
     color: "bg-primary text-white",
@@ -63,7 +62,7 @@ const services = [
     day: "Tuesday",
     duration: "1.5 hours",
     description:
-      "Dive deeper into God's Word with focused biblical teaching designed to transform your life and strengthen your faith.",
+      "Dive deeper into God&apos;s Word with focused biblical teaching designed to transform your life and strengthen your faith.",
     whatToExpect: [
       "In-depth Bible study and exposition",
       "Interactive Q&A sessions",
@@ -92,14 +91,14 @@ const services = [
     whatToExpect: [
       "Powerful worship and intercession",
       "Focused prayers for breakthrough",
-      "Testimonies of God's miraculous power",
+      "Testimonies of God&apos;s miraculous power",
       "Personal ministry and prayer",
       "Prophetic ministry and direction",
     ],
     benefits: [
       "Break through spiritual barriers",
       "Receive healing and restoration",
-      "Experience God's miraculous power",
+      "Experience God&apos;s miraculous power",
       "Get equipped for spiritual warfare",
     ],
     icon: FaBolt,
@@ -211,11 +210,11 @@ export default function ServicesPage() {
               Join Our Services
             </Badge>
             <h1 className="text-4xl md:text-6xl font-serif font-bold text-gray-900 mb-6">
-              Experience God's Presence
+              Experience God&apos;s Presence
               <span className="text-primary block">Every Week</span>
             </h1>
             <p className="text-xl text-gray-600 leading-relaxed mb-8">
-              Whether you're seeking victory, deeper understanding, or
+              Whether you&apos;re seeking victory, deeper understanding, or
               breakthrough, our services are designed to help you reconnect with
               God as part of our loving family.
             </p>
@@ -257,7 +256,7 @@ export default function ServicesPage() {
             initial="initial"
             animate="animate"
           >
-            {services.map((service, index) => {
+            {services.map((service) => {
               const Icon = service.icon;
               return (
                 <motion.div key={service.id} variants={staggerChild}>
@@ -319,7 +318,7 @@ export default function ServicesPage() {
                         <div>
                           <h4 className="font-semibold text-gray-900 mb-3 flex items-center">
                             <FaHeart className="h-4 w-4 mr-2 text-primary" />
-                            How You'll Benefit
+                            How You&apos;ll Benefit
                           </h4>
                           <ul className="space-y-2">
                             {service.benefits.map((benefit, i) => (
@@ -365,10 +364,10 @@ export default function ServicesPage() {
             initial="initial"
             animate="animate"
           >
-            {specialPrograms.map((program, index) => {
+            {specialPrograms.map((program) => {
               const Icon = program.icon;
               return (
-                <motion.div key={index} variants={staggerChild}>
+                <motion.div key={program.id} variants={staggerChild}>
                   <Card
                     id={program.id}
                     className={`text-center hover:shadow-lg transition-all duration-300 h-full scroll-mt-24 ${
@@ -409,10 +408,10 @@ export default function ServicesPage() {
               First Time Visiting?
             </h2>
             <p className="text-lg text-gray-600 mb-8 leading-relaxed">
-              We're excited to welcome you! Our church has a friendly atmosphere
-              where we're happy to welcome anyone, with our community feeling
-              acceptive of all kinds of people. Come as you are - we can't wait
-              to meet you.
+              We&apos;re excited to welcome you! Our church has a friendly
+              atmosphere where we&apos;re happy to welcome anyone, with our
+              community feeling accepting of all kinds of people. Come as you
+              are - we can&apos;t wait to meet you.
             </p>
 
             <div className="grid md:grid-cols-3 gap-8 mb-12">
@@ -482,7 +481,7 @@ export default function ServicesPage() {
               Questions About Our Services?
             </h2>
             <p className="text-lg text-gray-600 mb-8">
-              We're here to help! Contact us with any questions about our
+              We&apos;re here to help! Contact us with any questions about our
               services, what to expect, or how to get involved.
             </p>
 

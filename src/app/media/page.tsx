@@ -2,6 +2,7 @@
 
 import { motion } from "motion/react";
 import { X } from "lucide-react";
+import Image from "next/image";
 import {
   FaPlay,
   FaExternalLinkAlt,
@@ -89,27 +90,6 @@ const featuredContent = [
     platform: "YouTube",
     videoId: "y9GngU-qbys", // From company profile YouTube videos
     thumbnail: "/images/blog-3.png",
-  },
-];
-
-const liveSchedule = [
-  {
-    service: "Sunday Victory Service",
-    time: "7:30 AM",
-    day: "Sunday",
-    description: "Start your week with victory",
-  },
-  {
-    service: "Teaching Service",
-    time: "6:30 PM",
-    day: "Tuesday",
-    description: "Deep Bible study",
-  },
-  {
-    service: "Breakthrough Service",
-    time: "6:30 PM",
-    day: "Friday",
-    description: "Prayer and breakthrough",
   },
 ];
 
@@ -226,7 +206,7 @@ export default function MediaPage() {
             </h2>
             <p className="text-lg text-gray-600 max-w-3xl mx-auto">
               Watch our latest sermons and messages from Rev. Dr. Steve Mensah
-              and experience the life-changing power of God's Word.
+              and experience the life-changing power of God&apos;s Word.
             </p>
           </motion.div>
 
@@ -243,9 +223,11 @@ export default function MediaPage() {
                   onClick={() => openVideo(content.videoId, content.title)}
                 >
                   <div className="relative">
-                    <img
+                    <Image
                       src={content.thumbnail}
                       alt={content.title}
+                      width={400}
+                      height={192}
                       className="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-300"
                     />
                     <div className="absolute inset-0 bg-black/40 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">

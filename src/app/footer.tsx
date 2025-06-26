@@ -79,7 +79,8 @@ export default function Footer() {
             </Link>
 
             <p className="text-neutral-300 mb-4 leading-relaxed">
-              "We're helping people reconnect with God as a Family!"
+              &ldquo;We&apos;re helping people reconnect with God as a
+              Family!&rdquo;
             </p>
 
             <p className="text-sm text-neutral-400 mb-6">

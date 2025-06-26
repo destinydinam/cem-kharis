@@ -4,29 +4,15 @@ import { motion } from "motion/react";
 import Image from "next/image";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
-import {
-  Card,
-  CardContent,
-  CardDescription,
-  CardHeader,
-  CardTitle,
-} from "@/components/ui/card";
+// Card components removed as they are not used in this file
 import { Badge } from "@/components/ui/badge";
 import Navbar from "../navbar";
 import Footer from "../footer";
 import {
   Heart,
-  Users,
-  Globe,
-  BookOpen,
   Quote,
-  Award,
-  Target,
-  Lightbulb,
-  HandHeart,
   Crown,
   Clock,
-  Star,
   ArrowRight,
   CheckCircle,
 } from "lucide-react";
@@ -50,10 +36,6 @@ const fadeInRight = {
   transition: { duration: 0.6 },
 };
 
-const staggerContainer = {
-  animate: { transition: { staggerChildren: 0.2 } },
-};
-
 // Published books from company profile
 const publishedBooks = [
   "Bone of My Bones",
@@ -63,110 +45,7 @@ const publishedBooks = [
   "Go to Sleep after You Have Sown a Good Seed",
 ];
 
-// Personal qualities from company profile
-const founderQualities = [
-  {
-    title: "Humble Servant of God",
-    description: "Loved by many colleagues and Pastors around the world",
-    icon: Heart,
-  },
-  {
-    title: "Simple & Peace-Loving",
-    description: "Open to all persons regardless of social status or standing",
-    icon: Users,
-  },
-  {
-    title: "Compassionate & Kind",
-    description: "Large heart for the poor and needy in our communities",
-    icon: HandHeart,
-  },
-  {
-    title: "Passionate Evangelist",
-    description:
-      "Dedicated to reaching the unsaved and neglected in rural areas",
-    icon: Globe,
-  },
-];
-
-// Ministry focus areas from company profile
-const ministryFocus = [
-  {
-    title: "Rural Outreach",
-    description:
-      "Spearheads 'Christ to the Rural World Ministry' bringing Jesus to rural communities",
-    details: [
-      "Free medical help",
-      "Food distribution",
-      "Clothing assistance",
-      "Bibles and books",
-      "Spiritual care",
-    ],
-    icon: Globe,
-  },
-  {
-    title: "Community Empowerment",
-    description: "Empowers the poor to change their situation and environment",
-    details: [
-      "Skills training",
-      "Financial literacy",
-      "Business support",
-      "Educational assistance",
-      "Leadership development",
-    ],
-    icon: Target,
-  },
-  {
-    title: "Youth Development",
-    description:
-      "Teaching on youth empowerment to make a difference in their generation",
-    details: [
-      "Mentorship programs",
-      "Career guidance",
-      "Spiritual formation",
-      "Leadership training",
-      "Life skills",
-    ],
-    icon: Users,
-  },
-  {
-    title: "Teaching Ministry",
-    description:
-      "Radio teaching and conference speaking with passion and understanding",
-    details: [
-      "Sweet Melodies FM",
-      "International conferences",
-      "Bible teaching",
-      "Prayer seminars",
-      "Evangelism training",
-    ],
-    icon: BookOpen,
-  },
-];
-
-// Core values from company profile
-const coreValues = [
-  {
-    title: "Family Unity",
-    description: "We're helping people reconnect with God as a Family!",
-    icon: Heart,
-  },
-  {
-    title: "Faithful Conversion",
-    description:
-      "Making every parishioner a faithful person is our prized goal",
-    icon: Crown,
-  },
-  {
-    title: "Global Mission",
-    description: "Apostolic ministry spanning continents and nations worldwide",
-    icon: Globe,
-  },
-  {
-    title: "Community Care",
-    description: "Doors always open for those in need with caring hearts",
-    icon: HandHeart,
-  },
-];
+// Published books from company profile
 
 export default function AboutPage() {
   return (
@@ -270,8 +149,8 @@ export default function AboutPage() {
               <div className="bg-primary/5 rounded-lg p-6 border border-primary/20">
                 <Quote className="h-8 w-8 text-primary mb-4" />
                 <blockquote className="text-lg font-medium mb-4 italic">
-                  "Very approachable regardless of social status or standing,
-                  with a large heart for the poor and needy"
+                  &ldquo;Very approachable regardless of social status or
+                  standing, with a large heart for the poor and needy&rdquo;
                 </blockquote>
               </div>
             </motion.div>
@@ -290,10 +169,10 @@ export default function AboutPage() {
                 </h3>
                 <div className="space-y-4 church-body">
                   <p>
-                    Under Rev. Dr. Steve Mensah's leadership, CEM-Kharis Temple
-                    has grown into a vibrant community that serves both locally
-                    and internationally. His ministry focuses on practical
-                    biblical teaching and community outreach.
+                    Under Rev. Dr. Steve Mensah&apos;s leadership, CEM-Kharis
+                    Temple has grown into a vibrant community that serves both
+                    locally and internationally. His ministry focuses on
+                    practical biblical teaching and community outreach.
                   </p>
                   <p>
                     Through regular radio teachings on Sweet Melodies FM, the
@@ -339,10 +218,10 @@ export default function AboutPage() {
             <motion.div {...fadeInLeft}>
               <Badge className="mb-4">Our Mission</Badge>
               <h2 className="text-3xl md:text-4xl font-bold church-heading mb-6">
-                We're helping people reconnect with God as a Family!
+                We&apos;re helping people reconnect with God as a Family!
               </h2>
               <p className="text-lg church-body mb-8">
-                This is more than just our mission statement - it's the
+                This is more than just our mission statement - it&apos;s the
                 heartbeat of everything we do. We believe that church should
                 feel like coming home to family, where every person is welcomed,
                 loved, and cared for.
@@ -355,8 +234,8 @@ export default function AboutPage() {
                 </h3>
                 <p className="church-body">
                   We create an environment where people of all backgrounds can
-                  experience God's love through genuine community and caring
-                  relationships.
+                  experience God&apos;s love through genuine community and
+                  caring relationships.
                 </p>
               </div>
             </motion.div>
@@ -378,7 +257,7 @@ export default function AboutPage() {
                   Faithful Transformation
                 </h3>
                 <p className="church-body">
-                  We're committed to walking alongside each person in their
+                  We&apos;re committed to walking alongside each person in their
                   spiritual journey, helping them grow in faith and become all
                   that God has called them to be.
                 </p>

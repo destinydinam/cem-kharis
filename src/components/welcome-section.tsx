@@ -231,7 +231,7 @@ export function WelcomeSection() {
                   </h4>
                   <p className="text-gray-600 leading-relaxed">
                     Visit our church and meet dozens of new friends, all of whom
-                    follow the "love thy neighbor" principle!
+                    follow the &ldquo;love thy neighbor&rdquo; principle!
                   </p>
                 </div>
               </div>

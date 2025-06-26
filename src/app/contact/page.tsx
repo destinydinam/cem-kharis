@@ -5,9 +5,6 @@ import {
   FaMapMarkerAlt,
   FaPhone,
   FaEnvelope,
-  FaClock,
-  FaCalendarAlt,
-  FaRoute,
   FaPaperPlane,
   FaChurch,
   FaBook,
@@ -56,7 +53,7 @@ const contactInfo = [
     icon: FaEnvelope,
     title: "Email Us",
     details: "info@kharistemple.com",
-    subtitle: "We'll respond within 24 hours",
+    subtitle: "We&apos;ll respond within 24 hours",
     color: "text-primary",
   },
 ];
@@ -113,13 +110,13 @@ export default function ContactPage() {
               Get In Touch
             </Badge>
             <h1 className="text-4xl md:text-6xl font-serif font-bold text-gray-900 mb-6">
-              We'd Love to
+              We&apos;d Love to
               <span className="text-primary block">Connect With You</span>
             </h1>
             <p className="text-xl text-gray-600 leading-relaxed mb-8">
-              Whether you're looking for a church home, need prayer, or have
-              questions about our services, we're here to help you reconnect
-              with God as family.
+              Whether you&apos;re looking for a church home, need prayer, or
+              have questions about our services, we&apos;re here to help you
+              reconnect with God as family.
             </p>
           </motion.div>
         </div>
@@ -171,7 +168,7 @@ export default function ContactPage() {
                     Send Us a Message
                   </CardTitle>
                   <CardDescription className="text-base">
-                    Fill out the form below and we'll get back to you soon.
+                    Fill out the form below and we&apos;ll get back to you soon.
                   </CardDescription>
                 </CardHeader>
                 <CardContent className="space-y-6">
@@ -341,8 +338,8 @@ export default function ContactPage() {
               Find Us
             </h2>
             <p className="text-lg text-gray-600 max-w-3xl mx-auto">
-              We're conveniently located in Adenta-Accra, with easy access from
-              the Aviation Roundabout area.
+              We&apos;re conveniently located in Adenta-Accra, with easy access
+              from the Aviation Roundabout area.
             </p>
           </motion.div>
 
@@ -403,8 +400,8 @@ export default function ContactPage() {
                       Need Help Finding Us?
                     </h3>
                     <p className="text-gray-600 mb-4">
-                      Call us at +233543150780 and we'll help guide you to our
-                      location.
+                      Call us at +233543150780 and we&apos;ll help guide you to
+                      our location.
                     </p>
                     <Button
                       size="sm"

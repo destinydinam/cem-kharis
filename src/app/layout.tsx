@@ -21,7 +21,7 @@ export const metadata: Metadata = {
     template: "%s | CEM-Kharis Temple",
   },
   description:
-    "We're helping people reconnect with God as a Family! Join CEM-Kharis Temple for worship, fellowship, and spiritual growth in Adenta-Accra, Ghana.",
+    "We&apos;re helping people reconnect with God as a Family! Join CEM-Kharis Temple for worship, fellowship, and spiritual growth in Adenta-Accra, Ghana.",
   keywords: [
     "church",
     "ministry",
@@ -52,7 +52,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "CEM-Kharis Temple | Charismatic Evangelistic Ministry",
     description:
-      "We're helping people reconnect with God as a Family! Join us for worship, fellowship, and spiritual growth.",
+      "We&apos;re helping people reconnect with God as a Family! Join us for worship, fellowship, and spiritual growth.",
     url: "https://cemkharistemple.com",
     siteName: "CEM-Kharis Temple",
     images: [
@@ -70,7 +70,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "CEM-Kharis Temple | Charismatic Evangelistic Ministry",
     description:
-      "We're helping people reconnect with God as a Family! Join us for worship, fellowship, and spiritual growth.",
+      "We&apos;re helping people reconnect with God as a Family! Join us for worship, fellowship, and spiritual growth.",
     images: ["/images/hero-bg.jpg"],
   },
   robots: {
@@ -108,7 +108,7 @@ export default function RootLayout({
               alternateName:
                 "Charismatic Evangelistic Ministry - Kharis Temple",
               description:
-                "We're helping people reconnect with God as a Family!",
+                "We&apos;re helping people reconnect with God as a Family!",
               url: "https://cemkharistemple.com",
               logo: "https://cemkharistemple.com/images/logo.png",
               image: "https://cemkharistemple.com/images/hero-bg.jpg",
