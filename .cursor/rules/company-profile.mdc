@@ -1,0 +1,226 @@
+---
+description: 
+globs: 
+alwaysApply: false
+---
+# CEM-Kharis Temple - Comprehensive Company Profile
+
+## Organization Overview
+
+**Organization Name:** CEM-Kharis Temple (Charismatic Evangelistic Ministry - Kharis Temple)
+
+**Legal Status:** Religious Organization/Church
+
+**Established:** Founded by Rev. Dr. Steve Mensah (specific founding date not provided on website)
+
+**Location:** Adenta-Accra, Ghana
+- **Full Address:** Adenta Housing Down Near Aviation Roundabout, Adenta-Accra, Ghana
+
+**Mission Statement:** "We're helping people reconnect with God as a Family!"
+
+**Vision Statement:** "We make converting each single parishioner into a faithful person our prized goal!"
+
+**Website:** https://cemkharistemple.com/
+
+**Brand Assets:**
+- **Primary Logo:** `/public/images/logo.png` (Dark version)
+- **White Logo:** `/public/images/logo-white.png` (Light version for dark backgrounds)
+- **Preloader Animation:** `/public/images/preloader.png`
+
+## Leadership & Founder
+
+### Rev. Dr. Steve Mensah - General Overseer & Founder
+
+Rev. Steve Mensah is the General Overseer of the Charismatic Evangelistic Ministry (CEM) in Accra, Ghana. He is one of the Great Sons of Ghana the Lord has raised and is using greatly to affect lives not only in Ghana but round the world. He is a great conference speaker on Evangelism, Prayer, the Word and many more. His Apostolic Ministry has taken him to continents and nations round the world to bless and strengthen the body of Christ.
+
+**Personal Qualities:**
+- Humble servant of God loved by many colleagues and Pastors
+- Simple, peace-loving nature and openness to all persons
+- Very approachable regardless of social status or standing
+- Compassionate, kind, loving with a large heart for the poor and needy
+- Passionate about reaching the unsaved and neglected, especially in rural areas
+
+**Ministry Focus:**
+- Spearheads the "Christ to the Rural World Ministry" bringing "Jesus to the Rurals"
+- Conducts rural outreaches with free medical help, drugs, food, clothing, Bibles and books
+- Empowers the poor to change their situation and environment
+- Focuses on youth empowerment to make a difference in their generation
+- Teaches on Sweet Melodies FM radio
+
+**Published Books:**
+- Bone of My Bones
+- Life Changing Decisions
+- Reclaiming your Inheritance
+- 7 Things the Anointing Will Do for You
+- Go to Sleep after You Have Sown a Good Seed
+- And many more
+
+## Services & Programs
+
+### Regular Services Schedule
+- **Sunday Victory Service:** Every Sunday at 7:30am
+- **Teaching Service:** Every Tuesday at 6:30pm  
+- **Breakthrough Service:** Every Friday at 6:30pm
+
+### Special Programs
+- **Youth Week:** Annual event (September 19, 2024 was mentioned)
+  - *Event Images:* `/public/images/event1.png`, `/public/images/event2.png`, `/public/images/event3.png`
+- **Christ to the Rural World Ministry:** Annual rural outreach program
+- **Community Impact Programs:** Support for those in need
+
+### Ministry Departments
+- **Online Q&A Consulting:** Direct online spiritual consultation
+- **Community Impact:** Help for those in need, doors always open
+- **CEM Worldwide Outreach:** Evangelism and soul-winning missions
+- **Kharis Praise:** Music ministry
+- **Youth Service:** Dedicated youth programs
+
+## Digital Presence & Media
+
+### Website Structure (Sitemap)
+- **Homepage (index.html):** Main landing page with church overview
+  - *Hero Background:* `/public/images/hero-bg.jpg`
+  - *Hero Sliders:* `/public/images/slider-1.jpg`, `/public/images/slider-2.jpg`, `/public/images/slider-3.jpg`
+- **About (about.html):** Founder information and ministry details
+- **Gallery (gallery.html):** Photo albums from church activities (Album 1 & Album 2)
+  - *Gallery Images:* `/public/images/gallery-1.png`, `/public/images/gallery-2.png`, `/public/images/gallery-3.png`, `/public/images/gallery-4.png`, `/public/images/gallery-5.png`
+- **Media (media.html):** Video sermons and live streaming
+- **Audio (audio.html):** Downloadable sermon recordings
+- **Contacts (contacts.html):** Contact form and information
+
+### Social Media Presence
+- **Facebook:** https://www.facebook.com/cemkharistemple/
+- **Instagram:** https://www.instagram.com/cemkharistemple/
+- **YouTube:** https://www.youtube.com/@cemkharistemple7638
+
+### Media Content
+**Live Streaming:** https://youtu.be/2BU9oZ0VZ6Y (Watch Live Now!!)
+
+**Recent YouTube Videos:**
+- https://youtu.be/3PAkbdKbar4
+- https://youtu.be/y9GngU-qbys
+- https://youtu.be/3GkJrupDq5Y
+- https://youtu.be/Bp8h98_uFj0
+- https://youtu.be/PM0Y9yMgBgo
+- https://youtu.be/mYbmmEjEV00
+- https://youtu.be/TKqRV1aLzBU
+
+**Audio Sermons Available for Download:**
+- record1.mp3
+- record2.mp3
+- record3.mp3
+
+**Featured Sermon:** "Schemes of the Enemy PT1" by Rev. Marvin Amponsah Antwi
+
+## Contact Information
+
+**Physical Address:** Adenta Housing Down Near Aviation Roundabout, Adenta-Accra, Ghana
+
+**Email:** info@kharistemple.com
+
+**Phone:** +233543150780
+
+**Website Contact Form:** Available on contacts.html page
+
+## Website Technical Details
+
+### Domain & Hosting
+- **Primary Domain:** cemkharistemple.com
+- **SSL Status:** HTTPS enabled
+- **Page Load Performance:** Optimized with preloader
+- **Background Assets:** `/public/images/bg-image-9.jpg` (Section backgrounds)
+
+### Website Metadata
+- **Homepage Title:** "CEM | Kharis Temple"
+- **About Page Title:** "About"
+- **Gallery Page Title:** "Gallery"
+- **Media Page Title:** "Media"
+- **Audio Page Title:** "Download Audio Files"
+- **Contacts Page Title:** "Contacts"
+
+### Design & Color Scheme
+**Primary Colors:**
+- **Orange/Red:** #f47e4b (Primary accent color)
+- **Yellow/Green:** #efe939 (Secondary accent/background color)
+- **Dark Gray:** #151515 (Primary text color)
+- **Light Gray:** #9b9b9b (Secondary text color)
+- **Border Gray:** #ebebeb (Divider/border color)
+
+**Typography:**
+- **Primary Fonts:** Lato (400, 700, 900, 400italic)
+- **Secondary Font:** Merriweather (400, 700, 900, 700italic)
+- **Icon Fonts:** FontAwesome, fl-bigmug-line, fl-budicons-launch, fl-line-ui
+
+### Technical Framework
+- **CSS Framework:** Bootstrap
+- **JavaScript Libraries:** Core.min.js, Script.js
+- **Font Loading:** Google Fonts API
+- **Map Integration:** Google Maps (with API key issues noted)
+- **Responsive Design:** Mobile-optimized layout
+
+## Content Categories
+
+### Blog/Teaching Topics
+- **August Youth Service:** "How Important Is Church?"
+  - *Featured Image:* `/public/images/blog-1.png`
+- **Prophetic Emphasis:** "Favours from God"
+  - *Featured Image:* `/public/images/blog-2.png`
+- **Kharis Praise:** "Music and Dimensions"
+  - *Featured Image:* `/public/images/blog-3.png`
+
+### Gallery Categories
+- **Album 1:** Church activities and services
+- **Album 2:** Community events and gatherings
+- **Beautiful pictorial excerpts from the ministry**
+
+### Key Value Propositions
+- **Friendly Atmosphere:** "We are happy to welcome anyone, with our community feeling acceptive of all kinds of people!"
+- **Interesting Events:** "Our church has a long schedule of fascinating and deeply spiritual events, all to boost your serenity!"
+- **New People:** "Visit our church and meet dozens of new friends, all of whom follow the 'love thy neighbor' principle!"
+
+## Ministry Impact & Outreach
+
+### Community Services
+- **Free Medical Help:** Rural outreach programs
+- **Food Distribution:** Support for the needy
+- **Clothing Distribution:** Community assistance
+- **Bible & Book Distribution:** Spiritual resource sharing
+- **Educational Support:** Youth empowerment programs
+
+### International Reach
+- **Apostolic Ministry:** Continents and nations worldwide
+- **Conference Speaking:** International evangelism and prayer conferences
+- **Christ to the Rural World Ministry:** Expanding beyond Ghana
+
+### Radio Ministry
+- **Sweet Melodies FM:** Regular teaching broadcasts
+- **Word of God Teaching:** Passion, simplicity, and understanding
+
+## Website Design Credit
+- **Design by:** MultiMediaCabin
+- **Copyright:** CEM-Kharis Temple © 2025
+
+## Additional Notes
+- **Template Issues:** Contact page shows placeholder information (New York address) indicating template customization incomplete
+- **Map Integration:** Google Maps API key issues preventing proper map display
+- **Donation Feature:** Donate button present but links not configured
+- **Live Streaming:** Active YouTube integration for live services
+- **Audio Downloads:** Direct MP3 downloads available for sermons
+
+## Unique Selling Points
+1. **Rural Ministry Focus:** Specialized outreach to underserved rural communities
+2. **International Impact:** Apostolic ministry spanning continents
+3. **Holistic Approach:** Combining spiritual, medical, and material support
+4. **Youth Empowerment:** Dedicated focus on next generation leadership
+5. **Accessible Leadership:** Approachable founder regardless of social status
+6. **Multi-Media Ministry:** Radio, online, and in-person teaching
+7. **Community Integration:** Strong local presence with global vision
+
+## Target Demographics
+- **Primary:** Local Ghanaian community in Adenta-Accra area
+- **Secondary:** International Christian community through online presence
+- **Special Focus:** Rural communities, youth, poor and needy individuals
+- **Geographic Reach:** Ghana (primary), International (secondary through media)
+
+This comprehensive profile captures the essence of CEM-Kharis Temple as a community-focused, internationally-minded Christian ministry with strong leadership, diverse programs, and a commitment to serving both local and global communities through various media and outreach initiatives.
+

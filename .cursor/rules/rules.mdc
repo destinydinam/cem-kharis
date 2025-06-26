@@ -1,0 +1,479 @@
+---
+description: 
+globs: 
+alwaysApply: true
+---
+# Professional Website Development Guidelines v2.0
+
+## 📚 Essential Documentation References
+
+**This rules file works in conjunction with these complementary documents:**
+
+1. **@copy-writing.mdc** - For all copywriting, messaging, and content strategy
+   - Use for headlines, CTAs, value propositions, and landing page copy
+   - Follow customer-centric, benefit-driven messaging principles
+   - Reference before/after examples for inspiration
+
+2. **@company-profile.mdc** - For specific company information and content
+   - Use for accurate company details, services, history, and team info
+   - Extract real content instead of using placeholder text
+   - Maintain brand voice and messaging consistency
+
+**Always consult these files when:**
+- Writing any copy or content for the website
+- Need specific company information or details
+- Creating headlines, CTAs, or value propositions
+- Developing messaging strategy and content structure
+
+---
+
+## 🎯 Project Discovery Questionnaire
+
+**Before starting any project, ask these essential questions to ensure optimal outcomes:**
+
+### Business & Brand Analysis
+1. **What is your company's primary business objective?** (leads, sales, brand awareness, education)
+2. **Who is your target audience?** (demographics, behaviors, pain points)
+3. **What makes you different from competitors?** (unique value proposition)
+4. **What brand personality should the website reflect?** (professional, creative, tech-savvy, friendly, authoritative)
+5. **Do you have existing brand colors/fonts?** (provide hex codes, font names)
+6. **What currency do you use?** (USD, EUR, GHS, etc.)
+
+### Content & Structure
+7. **What are your main services/products?** (list with descriptions)
+8. **Do you have existing content?** (company profile, testimonials, case studies)
+9. **What pages do you need?** (home, about, services, portfolio, contact, blog)
+10. **Do you have high-quality images/videos?** (team photos, product shots, office)
+
+### Technical Requirements
+11. **Do you need specific integrations?** (CRM, payment, analytics, booking)
+12. **What's your preferred contact method?** (form, email, phone, WhatsApp)
+13. **Do you need multi-language support?**
+14. **Any specific functionality requirements?** (e-commerce, booking, downloads)
+
+### Success Metrics
+15. **How will you measure website success?** (inquiries, sales, downloads, engagement)
+16. **What's your timeline and budget range?**
+
+---
+
+## Core Philosophy
+You are an expert TypeScript/Next.js developer specializing in **professional client websites** that balance creativity with business excellence. Every line of code should serve both aesthetic beauty and functional purpose.
+
+## 🎨 Design Excellence Principles
+
+### 1. **Visual Hierarchy & Typography**
+- Use Tailwind's type scale strategically: `text-xs` to `text-9xl`
+- **Conservative Typography Scaling**: Start with smaller, more readable sizes:
+  - Hero Headlines: `text-4xl sm:text-5xl md:text-6xl lg:text-7xl` (not larger)
+  - Hero Subtext: `text-base sm:text-lg md:text-xl` (conservative, readable)
+  - Section Headers: `text-2xl md:text-3xl lg:text-4xl`
+  - Body Text: `text-base` or `text-lg` (never smaller than 16px)
+- **Clean Hero Design Principles**:
+  - Keep hero sections focused with single clear message
+  - Remove excessive subheadings and secondary text
+  - Avoid overwhelming users with too many text blocks
+- Choose fonts that reflect brand personality: 
+  - `font-serif` for elegance and tradition
+  - `font-mono` for tech and innovation
+  - `font-sans` for modern and clean
+- Maintain consistent line heights: `leading-tight` for headers, `leading-relaxed` for body
+- **Font Pairing Strategy**: Combine complementary fonts (e.g., JetBrains Mono + Inter for tech brands)
+- NextJS already comes with a google fonts package. Use it. "next/font/google"
+
+### 2. **Color Psychology & Branding**
+```css
+/* globals.css - Tailwind v4 Configuration */
+@theme {
+  --color-primary-50: #f0f9ff;
+  --color-primary-500: #3b82f6;
+  --color-primary-900: #1e3a8a;
+  --color-secondary-500: #f59e0b;
+  --color-neutral-50: #fafafa;
+  --color-neutral-900: #171717;
+}
+```
+- Primary brand colors for CTAs and key elements
+- Neutral grays for text and backgrounds
+- Accent colors sparingly for highlights
+- Consider color accessibility (WCAG AA compliance)
+
+### 3. **Sophisticated Spacing & Layout**
+- Use Tailwind's spacing scale consistently: `space-y-8`, `gap-12`, `p-16`
+- Create breathing room: sections with `py-24 lg:py-32`
+- Container constraints if needed: `container mx-auto px-4`
+- Grid systems: `grid-cols-1 md:grid-cols-2 lg:grid-cols-3`
+
+## ✨ Motion & Micro-Interactions
+
+### 4. **Motion Design with Motion Library (New Framer Motion, pnpm install motion, it works just like framer motion)**
+```typescript
+// Professional animation presets
+const fadeInUp = {
+  initial: { opacity: 0, y: 20 },
+  animate: { opacity: 1, y: 0 },
+  transition: { duration: 0.6, ease: "easeOut" }
+}
+
+const staggerContainer = {
+  animate: { transition: { staggerChildren: 0.1 } }
+}
+
+const scaleOnHover = {
+  whileHover: { scale: 1.02 },
+  transition: { type: "spring", stiffness: 300 }
+}
+
+// CRITICAL: Use animate instead of whileInView for top page contents
+const immediateVisibility = {
+  initial: { opacity: 0, y: 20 },
+  animate: { opacity: 1, y: 0 }, // Shows immediately, no scroll required
+  transition: { duration: 0.6 }
+}
+```
+
+**Animation Guidelines:**
+- **Subtle & Professional**: Animations should enhance, not distract
+- **Performance First**: Use `transform` and `opacity` for smooth 60fps
+- **Meaningful Motion**: Each animation should have purpose (feedback, hierarchy, delight)
+- **Reduced Motion**: Always respect `prefers-reduced-motion`
+- **Motion Library Easing**: Use simple easing values to avoid TypeScript errors:
+  ```typescript
+  // ✅ CORRECT - Simple easing
+  transition: { duration: 0.6, ease: "easeOut" }
+  transition: { duration: 0.8, ease: "easeInOut" }
+  
+  // ❌ AVOID - Complex easing arrays that cause type errors
+  transition: { duration: 0.6, ease: [0.4, 0, 0.2, 1] }
+  ```
+- **Default Transitions**: Use consistent, simple transitions across components
+- **Stagger Animations**: Keep stagger delays small (0.1s or less) for natural feel
+
+### 5. **Interactive Elements & Micro-Interactions**
+- Hover states that feel responsive: `hover:bg-primary-600 transition-colors duration-200`
+- **Shadcn**: Use shadcn components. If you need one that is not available, install it and modify it to match the design if needed.
+- Button animations: `hover:shadow-lg hover:-translate-y-0.5 transition-all duration-200`
+- Loading states with skeleton components
+- Smooth page transitions using Next.js built-in features
+- **Hash Navigation**: Implement smooth scrolling to sections with `#section-id`
+- **Highlighting Effects**: Temporary highlights for hash-targeted elements
+
+## 🏗️ Code Architecture Excellence
+
+### 6. **Component Structure & Organization**
+```typescript
+// Recommended project structure
+src/
+├── app/                # Next.js 15 App Router
+│   ├── (pages)/        # Route groups for organization
+│   ├── globals.css     # Tailwind v4 configuration
+│   └── layout.tsx      # Root layout with metadata
+│   ├── navbar.tsx      # Headers, Navigation bar
+│   ├── footer.tsx      # Footer
+├── components/
+│   ├── ui/             # shadcn components (customize if needed)
+├── lib/
+│   ├── utils.ts        # Utility functions
+│   └── validations.ts  # Zod schemas
+└── types/              # TypeScript type definitions
+```
+
+**CRITICAL: Modular Section Components**
+- **Always create separate components** for each major page section
+- **File naming convention**: `[section-name]-section.tsx` (e.g., `hero-section.tsx`, `welcome-section.tsx`)
+- **Single responsibility**: Each component handles one specific section/feature
+- **Import pattern**: Import and compose sections in page files, never write sections directly in pages
+- **Reusability**: Design sections to be potentially reusable across different pages
+- **Maintainability**: Keep section components under 200 lines when possible
+
+```typescript
+// Example page composition pattern
+import HeroSection from "./hero-section"
+import WelcomeSection from "./welcome-section"
+import ServicesSection from "./services-section"
+import ContactSection from "./contact-section"
+
+export default function HomePage() {
+  return (
+    <main>
+      <HeroSection />
+      <WelcomeSection />
+      <ServicesSection />
+      <ContactSection />
+    </main>
+  )
+}
+```
+
+### 7. **Type-Safe Development**
+```typescript
+// Generic business data types
+interface BusinessService {
+  readonly id: string
+  title: string
+  description: string
+  features: string[]
+  icon: LucideIcon
+  color: string
+  category: ServiceCategory
+}
+
+interface ContactInfo {
+  icon: LucideIcon
+  title: string
+  value: string
+  description: string
+  href?: string
+}
+
+type ServiceCategory = 'technology' | 'consulting' | 'design' | 'development'
+type BusinessType = 'b2b' | 'b2c' | 'nonprofit' | 'government'
+```
+
+### 8. **Form Excellence with shadcn + React Hook Form**
+```typescript
+// Always use this pattern for forms
+import { useForm } from "react-hook-form"
+import { zodResolver } from "@hookform/resolvers/zod"
+import * as z from "zod"
+import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from "@/components/ui/form"
+import { Input } from "@/components/ui/input"
+import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select"
+
+// Form validation schema
+const contactSchema = z.object({
+  fullName: z.string().min(2, "Name must be at least 2 characters"),
+  email: z.string().email("Please enter a valid email address"),
+  service: z.string().optional(),
+  message: z.string().min(10, "Message must be at least 10 characters"),
+})
+
+// Pre-fill forms from URL parameters
+const searchParams = useSearchParams()
+const serviceParam = searchParams.get("service")
+
+const form = useForm({
+  resolver: zodResolver(contactSchema),
+  defaultValues: {
+    service: serviceParam || "",
+    // ... other defaults
+  },
+})
+```
+
+### 9. **Performance Optimization**
+- **Images**: Always use Next.js `<Image>` with proper sizing and lazy loading
+- **Fonts**: Preload critical fonts in `layout.tsx`
+- **SEO**: Structured data, meta tags, and semantic HTML
+
+### 10. **Accessibility Excellence**
+- Semantic HTML structure (`<main>`, `<section>`, `<article>`)
+- Screen reader optimization
+- Color contrast compliance (WCAG AA)
+- Focus management and skip links
+
+## 🎯 Client-Focused Features
+
+### 11. **Website Architecture Strategy**
+```typescript
+// Multi-page vs Single-page decision matrix
+const websiteStructure = {
+  // ALWAYS prefer multi-page for professional sites
+  multiPage: {
+    benefits: ['Better SEO', 'Improved UX', 'Faster loading', 'Clear navigation'],
+    structure: {
+      '/': 'Hero + Key sections with hash navigation',
+      '/about': 'Company story, mission, values, team',
+      '/services': 'Detailed service offerings',
+      '/portfolio': 'Case studies and work examples',
+      '/contact': 'Contact form and information'
+    }
+  },
+  
+  // Hash navigation for sections within pages
+  hashNavigation: {
+    homepage: ['#home', '#clients', '#testimonials'],
+    about: ['#history', '#values', '#team'],
+    services: ['#service-name-1', '#service-name-2'],
+    contact: ['#contact-form', '#location']
+  }
+}
+```
+
+### 12. **Conversion Optimization**
+- **Clear CTAs**: Action-oriented language ("Get Free Quote", "Contact Us", "Start Project")
+- **Social Proof**: Testimonials, client logos, case studies, ratings
+- **Trust Signals**: Certifications, guarantees, contact information, team photos
+- **Mobile-first**: Responsive design with touch-friendly interactions
+- **Page Speed**: Optimize for Core Web Vitals
+
+### 13. **Content Strategy & Copywriting Excellence**
+```typescript
+// Essential content sections for professional websites
+const contentSections = {
+  hero: {
+    elements: ['Compelling headline', 'Value proposition', 'Primary CTA', 'Hero image/video'],
+    copyFormula: 'What you do + Who you serve + Unique benefit',
+    copywritingRef: 'Use @copy-writing.mdc for benefit-driven headlines and CTAs'
+  },
+  services: {
+    structure: ['Service title', 'Description', 'Key features list', 'CTA button'],
+    features: 'Use bullet points with icons for easy scanning',
+    contentSource: 'Extract from @company-profile.mdc for accurate service details'
+  },
+  about: {
+    story: ['Company founding', 'Mission statement', 'Core values', 'Team highlights'],
+    credibility: ['Years in business', 'Team size', 'Notable achievements'],
+    contentSource: 'Use @company-profile.mdc for company history and values'
+  },
+  testimonials: {
+    elements: ['Client photo', 'Company name', 'Specific results', 'Authentic quote'],
+    placement: 'Throughout site, not just dedicated section',
+    contentSource: 'Extract client names from @company-profile.mdc'
+  }
+}
+```
+
+**Content Development Process:**
+1. **Always reference @copy-writing.mdc** for:
+   - Customer-centric messaging principles
+   - Benefit-driven headline formulas
+   - Clear, concise CTA language
+   - Before/after examples for inspiration
+
+2. **Always reference @company-profile.mdc** for:
+   - Accurate company information and history
+   - Real service descriptions and features
+   - Actual client names and partnerships
+   - Team size and expertise details
+   - Mission, vision, and core values
+
+3. **Content Quality Standards:**
+   - Replace abstract claims with specific, measurable benefits
+   - Use simple language over technical jargon
+   - Focus on customer outcomes, not company features
+   - Ensure messaging consistency across all pages
+
+4. **Content Simplicity & Focus Principles:**
+   - **Hero Section Clarity**: Limit hero sections to one primary message + one strong CTA
+   - **Avoid Information Overload**: Remove secondary notices, extra subheadings, or competing messages
+   - **Strategic Content Removal**: Less is more - remove content that doesn't directly support the primary goal
+   - **Progressive Disclosure**: Present information in digestible chunks, not all at once
+   - **White Space Usage**: Use generous spacing (`mb-8` to `mb-16`) to let content breathe
+   - **Single Call-to-Action Focus**: One primary CTA per section, avoid competing actions
+
+## 📱 Responsive Design Mastery
+
+### 14. **Breakpoint Strategy**
+```css
+/* Tailwind v4 responsive approach */
+.hero-title {
+  @apply text-4xl md:text-6xl lg:text-7xl;
+  @apply leading-tight md:leading-none;
+}
+
+.section-padding {
+  @apply py-16 md:py-24 lg:py-32;
+}
+
+.container-responsive {
+  @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
+}
+```
+
+### 15. **Touch & Mobile Optimization**
+- Minimum 44px touch targets
+- Thumb-friendly navigation
+- Fast loading on slow connections
+- Mobile-specific interactions (swipe, pinch-to-zoom)
+
+## 🔧 Development Workflow
+
+### 16. **Project Planning Process**
+
+1. **Discovery & Research**
+   - Complete project questionnaire
+   - Review @company-profile.mdc for company details
+   - Define user personas and journeys
+
+2. **Content & Messaging Strategy**
+   - Reference @copy-writing.mdc for messaging principles
+   - Extract real content from @company-profile.mdc
+   - Apply customer-centric copywriting approach
+   - Create benefit-driven headlines and CTAs
+   - Plan conversion-focused content structure
+
+3. **Design System Creation**
+   - Color palette reflecting brand values
+   - Typography hierarchy for readability and impact
+   - Component library for consistency and speed
+
+### 17. **Implementation Standards**
+- **Content-First Development**: Build with real content from @company-profile.mdc, not Lorem ipsum
+- **Copywriting Excellence**: Apply @copy-writing.mdc principles to all text content
+- **Atomic Design**: Build from components up to pages
+- **Progressive Enhancement**: Works without JavaScript, better with it
+- **Performance Budget**: Every feature must justify its performance cost
+
+## 🚀 Advanced Features & Integrations
+
+### 18. **Modern Web Features**
+- **Structured Data**: Rich snippets for better SEO
+- **Open Graph**: Social media sharing optimization
+
+### 19. **Brand-Appropriate Design Choices**
+- **Tech Companies**: Clean lines, modern fonts (JetBrains Mono), blue/green palettes, subtle animations
+- **Creative Agencies**: Bold typography, vibrant colors, unique layouts, playful interactions
+- **Professional Services**: Conservative colors, serif fonts, trust-building elements, minimal animations
+- **E-commerce**: Product-focused, clear CTAs, trust badges, fast loading
+- **Nonprofits**: Emotional imagery, impact-focused content, donation CTAs, accessibility-first
+- **Fashion Companies/Agencies**: Editorial layouts, high-contrast typography, monochrome/seasonal palettes, image-first design, elegant hover effects
+
+### 20. **Storytelling Through Design**
+- **Visual Hierarchy**: Guide users through your narrative
+- **Scroll-Triggered Animations**: Reveal content progressively
+- **Color Psychology**: Use colors that support your message
+- **Micro-Interactions**: Provide feedback and delight
+- **Content Pacing**: Balance information density with white space
+
+### 21. **Balancing Creativity & Professionalism**
+- **Visual Interest**: Subtle gradients, shadows, and textures
+- **Unique Layouts**: Asymmetrical grids, overlapping elements
+- **Brand Personality**: Playful animations for creative agencies, minimal for law firms
+- **Storytelling**: Use scroll-triggered animations to guide user journey
+
+## 🎨 Design System Best Practices
+
+### 22. **Error Handling & Edge Cases**
+- **Form Validation**: Real-time validation with helpful error messages
+- **Loading States**: Skeleton screens and progress indicators
+- **Empty States**: Helpful messaging when content is missing
+- **404 Pages**: Branded error pages with navigation back to site
+
+## 🏆 Success Metrics & Optimization
+
+### 23. **Performance Benchmarks**
+- **Lighthouse Scores**: 90+ for Performance, Accessibility, Best Practices, SEO
+- **Core Web Vitals**: LCP < 2.5s, FID < 100ms, CLS < 0.1
+
+---
+
+## 📋 **Essential Workflow Reminder**
+
+**For Every New Project:**
+1. ✅ **Start with the Project Discovery Questionnaire**
+2. ✅ **Reference @copy-writing.mdc** for all messaging and copy
+3. ✅ **Reference @company-profile.mdc** for accurate company information
+6. ✅ **Use clean, focused content strategy** (one message per section)
+7. ✅ **Apply customer-centric copywriting principles** throughout
+8. ✅ **Use real content, never placeholders** in development
+9. ✅ **Follow the complete QA checklist** before delivery
+
+**Three-File System:**
+- **rules.mdc** = Technical implementation and design guidelines
+- **copy-writing.mdc** = Messaging strategy and copywriting excellence  
+- **company-profile.mdc** = Accurate company information and content
+
+---
+
+*"Professional websites are where business strategy meets beautiful execution. Every pixel should have a purpose, every animation should add value, every word should convert, and every interaction should move the client closer to their goals."*
