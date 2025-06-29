@@ -351,14 +351,18 @@ export default function ContactPage() {
           >
             {/* Map Placeholder */}
             <motion.div variants={staggerChild}>
-              <Card className="overflow-hidden">
-                <div className="aspect-video bg-gradient-to-br from-gray-100 to-gray-200 flex items-center justify-center">
-                  <div className="text-center text-gray-500">
-                    <FaMapMarkerAlt className="h-12 w-12 mx-auto mb-4" />
-                    <p className="text-lg font-medium">Interactive Map</p>
-                    <p className="text-sm">Coming Soon</p>
-                  </div>
-                </div>
+              <Card className="overflow-hidden hover:shadow-lg transition-shadow duration-300 p-0">
+                <iframe
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d17865.43483372001!2d-0.16245137162955783!3d5.699177676685926!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xfdf833411ac79ff%3A0xaafa66c074c631d6!2sCharismatic%20Evangelistic%20Ministry%2C%20Kharis%20Temple!5e1!3m2!1sen!2sgh!4v1751194290096!5m2!1sen!2sgh"
+                  width="100%"
+                  height="450"
+                  style={{ border: 0 }}
+                  allowFullScreen={true}
+                  loading="lazy"
+                  referrerPolicy="no-referrer-when-downgrade"
+                  title="Kharis Temple Location Map"
+                  className="w-full"
+                />
               </Card>
             </motion.div>
 
