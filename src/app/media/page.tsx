@@ -270,7 +270,7 @@ export default function MediaPage() {
       </section>
 
       {/* Social Media Integration */}
-      <section className="py-24 lg:py-32">
+      <section id="social-media" className="py-24 lg:py-32">
         <div className="container mx-auto px-4">
           <motion.div className="text-center mb-16" {...fadeInUp}>
             <h2 className="text-3xl md:text-5xl font-serif font-bold text-gray-900 mb-6">

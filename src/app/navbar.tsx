@@ -218,8 +218,8 @@ export default function Navbar() {
               <span className="font-medium">Watch Live Now!</span>
             </div>
             <Link
-              href="https://youtu.be/2BU9oZ0VZ6Y"
-              target="_blank"
+              // href="https://youtu.be/2BU9oZ0VZ6Y"
+              href="/media#social-media"
               rel="noopener noreferrer"
               className="text-sm hover:underline"
             >
